@@ -1,0 +1,636 @@
+INFO Watching for file changes with StatReloader
+INFO C:\Users\008\Desktop\MileStone3\MileStone3\Starter\Starter\settings.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+WARNING log Unauthorized: /issue
+WARNING basehttp "PUT /issue HTTP/1.1" 401 183
+INFO basehttp "POST /api/token/ HTTP/1.1" 200 483
+WARNING log Bad Request: /issue
+WARNING basehttp "PUT /issue HTTP/1.1" 400 58
+WARNING log Bad Request: /issue
+WARNING basehttp "PUT /issue HTTP/1.1" 400 58
+INFO basehttp "GET /issue HTTP/1.1" 200 444
+INFO views {'message': '*****Updated Feild Of Issue****', 'updated_field': <Issue: Issue object (8)>}
+INFO basehttp "PUT /issue HTTP/1.1" 200 28
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO views {'message': '*****Updated Feild Of Issue****', 'updated_field': IssueAppSerializer(<Issue: Issue object (8)>, data={'id': 8, 'type': 'EPIC', 'title': 'Not', 'description': 'Not Working', 'reporter': 'abhinav', 'assignee': 'cgfh', 'status': 'Open', 'project': 5}):
+    id = IntegerField(read_only=True)
+    type = ChoiceField(choices=(('BUG', 'BUG'), ('TASK', 'TASK'), ('STORY', 'STORY'), ('EPIC', 'EPIC')))
+    title = CharField(max_length=20)
+    description = CharField(max_length=100)
+    reporter = CharField(max_length=50)
+    assignee = CharField(max_length=50)
+    status = ChoiceField(choices=(('Open', 'Open'), ('In Progress', 'In Progress'), ('In Review', 'In Review'), ('Code Complete', 'Code Complete'), ('Done', 'Done')), required=False)
+    project = PrimaryKeyRelatedField(queryset=Project.objects.all())}
+INFO basehttp "PUT /issue HTTP/1.1" 200 28
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO views {'message': '*****Updated Feild Of Issue****', 'updated_field': {'id': 8, 'type': 'BUG', 'title': 'Not', 'description': 'Not Working', 'reporter': 'abhinav', 'assignee': 'cgfh', 'status': 'Open', 'project': 5}}
+INFO basehttp "PUT /issue HTTP/1.1" 200 28
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO views {'message': '*****Updated Feild Of Issue****', 'updated_field': {'id': 8, 'type': 'EPIC', 'title': 'Not', 'description': 'Not Working', 'reporter': 'abhinav', 'assignee': 'cgfh', 'status': 'Open', 'project': 5}, 'timestamp': datetime.datetime(2022, 9, 16, 13, 10, 2, 309694)}
+INFO basehttp "PUT /issue HTTP/1.1" 200 28
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO views {'message': '*****Updated Feild Of Issue****', 'updated_field': {'id': 8, 'type': 'TASK', 'title': 'Not', 'description': 'Not Working', 'reporter': 'abhinav', 'assignee': 'cgfh', 'status': 'Open', 'project': 5}, 'timestamp': '2022-09-16 13:10:56.088942 hours!'}
+INFO basehttp "PUT /issue HTTP/1.1" 200 28
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "POST /api/token/ HTTP/1.1" 200 483
+ERROR log Internal Server Error: /issue
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py", line 40, in put
+    if issue_serializer.is_valid():
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\serializers.py", line 15, in validate_reporter
+    raise serializers.ValidationError("Reporter Will Not Be Updated",safe=False)
+TypeError: ValidationError.__init__() got an unexpected keyword argument 'safe'
+ERROR basehttp "PUT /issue HTTP/1.1" 500 115400
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\serializers.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO views {'message': '*****Updated Feild Of Issue****', 'updated_field': {'id': 8, 'type': 'TASK', 'title': 'Not', 'description': 'Not Working', 'reporter': '<JsonResponse status_code=200, "application/json">', 'assignee': 'cgfh', 'status': 'Open', 'project': 5}, 'timestamp': '2022-09-16 14:38:24.690059'}
+INFO basehttp "PUT /issue HTTP/1.1" 200 28
+INFO basehttp "GET /issue HTTP/1.1" 200 489
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\serializers.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\serializers.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO views {'message': '*****Updated Feild Of Issue****', 'updated_field': {'id': 8, 'type': 'TASK', 'title': 'Not', 'description': 'Not Working', 'reporter': 'abhinav', 'assignee': 'cgfh', 'status': 'Open', 'project': 5}, 'timestamp': '2022-09-16 14:40:45.124683'}
+INFO basehttp "PUT /issue HTTP/1.1" 200 28
+INFO views {'message': '*****Updated Feild Of Issue****', 'updated_field': {'id': 8, 'type': 'TASK', 'title': 'Not', 'description': 'Not Working', 'reporter': 'sharma', 'assignee': 'cgfh', 'status': 'Open', 'project': 5}, 'timestamp': '2022-09-16 14:40:58.088001'}
+INFO basehttp "PUT /issue HTTP/1.1" 200 28
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\serializers.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "GET /issue HTTP/1.1" 200 443
+ERROR log Internal Server Error: /issue
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py", line 40, in put
+    if issue_serializer.is_valid():
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\serializers.py", line 15, in validate_reporter
+    raise serializers.ValidationError("Reporter Will Not Be Updated",safe=False)
+TypeError: ValidationError.__init__() got an unexpected keyword argument 'safe'
+ERROR basehttp "PUT /issue HTTP/1.1" 500 115334
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+ERROR log Internal Server Error: /issue
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py", line 40, in put
+    if issue_serializer.is_valid():
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\serializers.py", line 15, in validate_reporter
+    raise serializers.ValidationError("Reporter Will Not Be Updated",safe=False)
+TypeError: ValidationError.__init__() got an unexpected keyword argument 'safe'
+ERROR basehttp "PUT /issue HTTP/1.1" 500 115334
+INFO views {'message': '*****Updated Feild Of Issue****', 'updated_field': {'id': 9, 'type': 'TASK', 'title': 'Not', 'description': 'Not Working', 'reporter': 'abhinav', 'assignee': 'cgfh', 'status': 'Open', 'project': 5}, 'timestamp': '2022-09-16 14:46:39.236752'}
+INFO basehttp "PUT /issue HTTP/1.1" 200 28
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\serializers.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+ERROR log Internal Server Error: /issue
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py", line 40, in put
+    if issue_serializer.is_valid():
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\serializers.py", line 15, in validate_reporter
+    raise serializers.ValidationError("Reporter Will Not Be Updated",safe=False)
+TypeError: ValidationError.__init__() got an unexpected keyword argument 'safe'
+ERROR basehttp "PUT /issue HTTP/1.1" 500 115402
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\serializers.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+ERROR log Internal Server Error: /issue/
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py", line 67, in put
+    if issue_serializer.is_valid():
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 485, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\serializers.py", line 14, in validate_reporter
+    if self.instance and value != self.instance.reporter:
+AttributeError: 'QuerySet' object has no attribute 'reporter'
+ERROR basehttp "PUT /issue/?id=9 HTTP/1.1" 500 116146
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO views {'message': '*****Updated Feild Of Issue With Id As an Paramtere****', 'updated_field': {'id': 9, 'type': 'BUG', 'title': 'Not', 'description': 'Not Working', 'reporter': 'abhinav', 'assignee': 'cgfh', 'status': 'Open', 'project': 5}, 'previous_feild': <Issue: Issue object (9)>, 'timestamp': '2022-09-16 15:16:47.673272'}
+INFO basehttp "PUT /issue/?id=9 HTTP/1.1" 200 28
+INFO basehttp "GET /issue HTTP/1.1" 200 443
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "GET /issue/?id=10 HTTP/1.1" 200 149
+ERROR log Internal Server Error: /issue/
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py", line 73, in put
+    "previous_feild":json.load(issues_filter),
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+AttributeError: 'Issue' object has no attribute 'read'
+ERROR basehttp "PUT /issue/?id=10 HTTP/1.1" 500 98408
+ERROR log Internal Server Error: /issue/
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py", line 73, in put
+    "previous_feild":json.load(issues_filter),
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+AttributeError: 'Issue' object has no attribute 'read'
+ERROR basehttp "PUT /issue/?id=9 HTTP/1.1" 500 98391
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO views {'message': '*****Updated Feild Of Issue With Id As an Parameter****', 'updated_field': {'id': 9, 'type': 'TASK', 'title': 'Not', 'description': 'Not Working', 'reporter': 'abhinav', 'assignee': 'cgfh', 'status': 'Open', 'project': 5}, 'timestamp': '2022-09-16 15:23:33.707255'}
+INFO basehttp "PUT /issue/?id=9 HTTP/1.1" 200 28
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+ERROR log Internal Server Error: /issue/
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py", line 73, in put
+    "previous_feild":json.load(issues_filter),
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+AttributeError: 'Issue' object has no attribute 'read'
+ERROR basehttp "PUT /issue/?id=9 HTTP/1.1" 500 98393
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO views {'message': '*****Updated Feild Of Issue With Id As an Parameter****', 'updated_field': {'id': 9, 'type': 'TASK', 'title': 'Not', 'description': 'Not Working', 'reporter': 'abhinav', 'assignee': 'cgfh', 'status': 'Open', 'project': 5}, 'timestamp': '2022-09-16 15:24:24.256999'}
+INFO basehttp "PUT /issue/?id=9 HTTP/1.1" 200 28
+INFO basehttp "GET /issue HTTP/1.1" 200 443
+INFO views {'message': '*****Updated Feild Of Issue With Id As an Parameter****', 'updated_field': {'id': 9, 'type': 'TASK', 'title': 'Not', 'description': 'Not Working', 'reporter': 'abhinav', 'assignee': 'cgfh', 'status': 'In Progress', 'project': 5}, 'timestamp': '2022-09-16 15:25:49.494014'}
+INFO basehttp "PUT /issue/?id=9 HTTP/1.1" 200 28
+INFO basehttp "GET /issue HTTP/1.1" 200 450
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+ERROR log Internal Server Error: /issue/
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py", line 73, in put
+    "previous_feild":issues_filter.objects.all().values(),
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 186, in __get__
+    raise AttributeError(
+AttributeError: Manager isn't accessible via Issue instances
+ERROR basehttp "PUT /issue/?id=9 HTTP/1.1" 500 97586
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+ERROR log Internal Server Error: /issue/
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py", line 70, in put
+    issues_filter=issues_filter.objects.all().values()
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 186, in __get__
+    raise AttributeError(
+AttributeError: Manager isn't accessible via Issue instances
+ERROR basehttp "PUT /issue/?id=9 HTTP/1.1" 500 97596
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+ERROR log Internal Server Error: /issue/
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py", line 70, in put
+    issueslogger=issues_filter.objects.all().values()
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 186, in __get__
+    raise AttributeError(
+AttributeError: Manager isn't accessible via Issue instances
+ERROR basehttp "PUT /issue/?id=9 HTTP/1.1" 500 97593
+ERROR log Internal Server Error: /issue/
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py", line 70, in put
+    issueslogger=issues_filter.objects.all().values()
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 186, in __get__
+    raise AttributeError(
+AttributeError: Manager isn't accessible via Issue instances
+ERROR basehttp "PUT /issue/?id=9 HTTP/1.1" 500 97593
+ERROR log Internal Server Error: /issue/
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py", line 70, in put
+    issueslogger=issues_filter.objects.all().values()
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 186, in __get__
+    raise AttributeError(
+AttributeError: Manager isn't accessible via Issue instances
+ERROR basehttp "PUT /issue/?id=9 HTTP/1.1" 500 97593
+ERROR log Internal Server Error: /issue/
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py", line 70, in put
+    issueslogger=issues_filter.objects.all().values()
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 186, in __get__
+    raise AttributeError(
+AttributeError: Manager isn't accessible via Issue instances
+ERROR basehttp "PUT /issue/?id=9 HTTP/1.1" 500 97607
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+ERROR log Internal Server Error: /issue/
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py", line 68, in put
+    issueslogger=issues_filter.objects.all().values()
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 186, in __get__
+    raise AttributeError(
+AttributeError: Manager isn't accessible via Issue instances
+ERROR basehttp "PUT /issue/?id=9 HTTP/1.1" 500 97573
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO views {'message': '*****Updated Feild Of Issue With Id As an Parameter****', 'updated_field': {'id': 9, 'type': 'TASK', 'title': 'Not', 'description': 'Not Working', 'reporter': 'abhinav', 'assignee': 'cgfh', 'status': 'In Progress', 'project': 5}, 'timestamp': '2022-09-16 15:33:15.203697'}
+INFO basehttp "PUT /issue/?id=9 HTTP/1.1" 200 28
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "POST /api/token/ HTTP/1.1" 200 483
+INFO basehttp "POST /api/token/ HTTP/1.1" 200 483
+INFO basehttp "GET /issue HTTP/1.1" 200 450
+INFO basehttp "POST /issue HTTP/1.1" 200 27
+INFO basehttp "GET /issue HTTP/1.1" 200 606
+INFO views {'message': '*****Updated Feild Of Issue****', 'updated_field': {'id': 10, 'type': 'TASK', 'title': 'Not', 'description': 'Not Working', 'reporter': 'abhinav', 'assignee': 'cgfh', 'status': 'Done', 'project': 5}, 'timestamp': '2022-09-16 16:02:51.293397'}
+INFO basehttp "PUT /issue HTTP/1.1" 200 28
+INFO basehttp "GET /issue/?id=9 HTTP/1.1" 200 155
+WARNING log Unauthorized: /issue/
+WARNING basehttp "PUT /issue/?id=9 HTTP/1.1" 401 58
+INFO basehttp "POST /api/token/ HTTP/1.1" 200 483
+INFO views {'message': '*****Updated Feild Of Issue With Id As an Parameter****', 'updated_field': {'id': 9, 'type': 'TASK', 'title': 'Not', 'description': 'Not Working', 'reporter': 'abhinav', 'assignee': 'cgfh', 'status': 'Done', 'project': 5}, 'timestamp': '2022-09-16 16:05:54.666151'}
+INFO basehttp "PUT /issue/?id=9 HTTP/1.1" 200 28
+INFO basehttp "GET /issue HTTP/1.1" 200 600
+ERROR log Internal Server Error: /issue/
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\views.py", line 56, in get
+    id = request.GET['id']
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'id'
+ERROR basehttp "GET /issue/?title=Not HTTP/1.1" 500 99210
+INFO basehttp "GET /issue/search/?title=Not HTTP/1.1" 200 600
+INFO basehttp "POST /api/token/ HTTP/1.1" 200 483
+WARNING log Unauthorized: /project
+WARNING basehttp "GET /project HTTP/1.1" 401 58
+INFO basehttp "GET /project HTTP/1.1" 200 239
+INFO autoreload C:\Users\008\Desktop\MileStone3\MileStone3\Starter\IssueApp\serializers.py changed, reloading.
+INFO autoreload Watching for file changes with StatReloader
+INFO basehttp "POST /project HTTP/1.1" 200 28
+INFO basehttp "GET /project HTTP/1.1" 200 314
+INFO basehttp "PUT /project HTTP/1.1" 200 30
+ERROR log Internal Server Error: /project
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\ProjectApp\views.py", line 34, in put
+    project= Project.objects.get(id=project_data['id'])
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+ProjectApp.models.Project.DoesNotExist: Project matching query does not exist.
+ERROR basehttp "PUT /project HTTP/1.1" 500 99882
+INFO basehttp "PUT /project HTTP/1.1" 200 30
+ERROR log Internal Server Error: /project/search/id=8
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\008\Desktop\MileStone3\MileStone3\Starter\ProjectApp\views.py", line 57, in get
+    id = request.GET['id']
+  File "C:\Users\008\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'id'
+ERROR basehttp "GET /project/search/id=8 HTTP/1.1" 500 98618
+INFO basehttp "GET /project/search/?id=8 HTTP/1.1" 200 81
+WARNING log Not Found: /delete/search/
+WARNING basehttp "DELETE /delete/search/?id=8 HTTP/1.1" 404 3414
+WARNING log Unauthorized: /project/delete/
+WARNING basehttp "DELETE /project/delete/?id=8 HTTP/1.1" 401 58
+INFO basehttp "DELETE /project/delete/?id=8 HTTP/1.1" 200 30

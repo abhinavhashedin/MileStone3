@@ -147,3 +147,53 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+import os
+
+if not os.path.exists('logs'):
+       os.makedirs('logs')
+APP_LOG_FILENAME = os.path.join(BASE_DIR, 'logs/app.log')
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {module} {message}',
+            'style': '{',
+        },
+    },
+    'filters': {
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'INFO',
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+        'info': {  # Output log to file
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            # Location of log files
+            'filename': os.path.join(BASE_DIR , 'logs/UpdateIssue.log'),
+            'maxBytes': 300 * 1024 * 1024,  # 300M Size
+            'backupCount': 10,
+            'formatter': 'simple',
+            'encoding': 'utf-8'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['info','console'],
+            'propagate': True,
+            'level':'INFO'
+        }
+    }
+}

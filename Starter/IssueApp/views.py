@@ -9,8 +9,9 @@ from IssueApp.serializers import IssueAppSerializer
 from rest_framework import status;
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
-
-
+import logging
+import datetime
+import json    
 
 class Issues(APIView):
     permission_classes = (IsAuthenticated, )
@@ -32,13 +33,20 @@ class Issues(APIView):
         
     #Update an Issue by it's id but making sure reporter is not getting updated
     def put(self, request):
+        logger =logging.getLogger(__name__)
+        logger =logging.getLogger('django')
         issues_data=JSONParser().parse(request)
         issue= Issue.objects.get(id=issues_data['id'])
         issue_serializer=IssueAppSerializer(issue,data=issues_data)
         if issue_serializer.is_valid():
            issue_serializer.save()
+           logger.info({
+                         "message": "*****Updated Feild Of Issue****",
+                         "updated_field": issue_serializer.data,
+                         "timestamp":str(datetime.datetime.now())
+                         })
            return JsonResponse("Issue Updated Successfully",safe=False)
-        return JsonResponse(issue_serializer.errors,status=status.HTTP_400_BAD_REQUEST);    
+        return JsonResponse("Issue Did Not Updated Successfully ",safe=False);    
 
 class IssuesbyId(APIView):
     permission_classes = (IsAuthenticated, )
@@ -50,6 +58,24 @@ class IssuesbyId(APIView):
         issues_serializer=IssueAppSerializer(issues_filter,many=True)
         return JsonResponse(issues_serializer.data,safe=False)
 
+    def put(self, request):
+        logger =logging.getLogger(__name__)
+        logger =logging.getLogger('django')
+        id=request.GET.get('id', None)
+        issues_filter = Issue.objects.filter(id=id).first()
+        issues_data=JSONParser().parse(request)
+        issue_serializer=IssueAppSerializer(issues_filter,data=issues_data)
+        if issue_serializer.is_valid():
+           issue_serializer.save()
+           logger.info({
+                         "message": "*****Updated Feild Of Issue With Id As an Parameter****",
+                         "updated_field": issue_serializer.data,
+                         "timestamp":str(datetime.datetime.now())
+                         })
+           return JsonResponse("Issue Updated Successfully",safe=False)
+        return JsonResponse("Issue Did Not Updated Successfully ",safe=False); 
+    
+
 class Issuesbytitle(APIView):
     permission_classes = (IsAuthenticated, )
 #Gets An Issue Details With Title As An Parameter and response will also return multiple issues if sharing same title
@@ -58,4 +84,4 @@ class Issuesbytitle(APIView):
         title=request.GET.get('title', None)
         issues_filter = Issue.objects.filter(title=title)
         issues_serializer=IssueAppSerializer(issues_filter,many=True)
-        return JsonResponse(issues_serializer.data,safe=False)
+        return JsonResponse(issues_serializer.data,safe=False)  
